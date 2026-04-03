@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body>
+  <div class="container">
+    <h2>Forgot Password</h2>
+
+    <% if (typeof error !== 'undefined') { %>
+      <div class="error"><%= error %></div>
+    <% } %>
+
+    <% if (typeof success !== 'undefined') { %>
+      <div class="success"><%= success %></div>
+    <% } %>
+
+    <form action="/users/forgot" method="POST">
+      <div class="form-group">
+        <label for="email">Enter your registered email address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <button type="submit">Send Reset Link</button>
+    </form>
+  </div>
+</body>
+</html>

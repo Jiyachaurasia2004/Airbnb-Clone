@@ -1,0 +1,50 @@
+<% layout('/layouts/boilerplate') -%>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card shadow p-4">
+        <div class="text-center mb-4">
+          <h1 class="text-center mb-4">Login</h1>
+        </div>
+
+        <form action="/users/login" method="POST" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              name="username"
+              id="username"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              name="password"
+              id="password"
+              type="password"
+              class="form-control"
+              required
+            />
+            <!-- Forgot Password Link -->
+           <div class="text-end mt-1">
+                    <a href="/users/forgot" class="text-decoration-none">Forgot Password?</a>
+            </div>
+
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-success">Login</button>
+          </div>
+        </form>
+
+        <a href="/users/signup" class="text-decoration-none text-black d-flex justify-content-center pt-2">
+          Want to create a new account? <span class="text-success ms-1">Sign up</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
